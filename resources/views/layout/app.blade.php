@@ -9,6 +9,7 @@
     <meta content="" name="description">
 
     <meta content="" name="keywords">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <!-- Favicons -->
     <!-- <link href="assets/img/favicon.png" rel="icon"> -->
@@ -51,11 +52,11 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#hero">Beranda</a></li>
-                    <li><a class="nav-link scrollto" href="#about">Profil</a></li>
-                    <li><a class="nav-link scrollto" href="#services">Berita</a></li>
-                    <li><a class="nav-link scrollto" href="#portfolio">Kalender</a></li>
-                    <li><a class="nav-link scrollto" href="#team">Kontak</a></li>
+                    <li><a class="nav-link scrollto active" href="/">Beranda</a></li>
+                    <li><a class="nav-link scrollto" href="/profil">Profil</a></li>
+                    <li><a class="nav-link scrollto" href="/berita">Berita</a></li>
+                    <li><a class="nav-link scrollto" href="/kalender">Kalender</a></li>
+                    <li><a class="nav-link scrollto" href="/kontak">Kontak</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
@@ -115,6 +116,7 @@
 
     <!-- Template Main JS File -->
     <script src="{{asset('js/main.js')}}"></script>
+    <script src="{{asset('js/kalender.js')}}"></script>
 
 </body>
 
