@@ -7,7 +7,6 @@
         <header class="section-header">
             <h3>Kalender</h3>
             <p>Agenda BEM PENS</p>
-            <p>{{'event'}}</p>
         </header>
         <div id="showKaleder"></div>
     </div>

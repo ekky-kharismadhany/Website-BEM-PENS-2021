@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\KalenderController;
+use App\Http\Controllers\ProfileController;
+use App\Models\Kalender;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,11 +18,26 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
+});
+Route::get('/profil', function () {
+    return view('profil');
+});
+Route::get('/berita', [BeritaController::class, 'getAllNews']);
+Route::get('/event', [KalenderController::class, 'getEvent']);
+Route::get('/kontak', function () {
+    return view('kontak');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__.'/auth.php';
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+    Route::view('profile', 'profile')->name('profile');
+    Route::put('profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::view('news', 'news')->name('news');
+    Route::view('news/add', 'addNews')->name('news.add');
+    Route::view('news/edit/', 'editNews')->name('news.edit');
+    Route::view('calendar', 'calendar')->name('calendar');
+});
+require __DIR__ . '/auth.php';
