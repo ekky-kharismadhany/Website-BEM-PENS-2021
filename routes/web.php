@@ -1,8 +1,5 @@
 <?php
 
-use App\Http\Controllers\BeritaController;
-use App\Http\Controllers\KalenderController;
-use App\Models\Berita;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,17 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('landing');
-});
-Route::get('/profil', function () {
-    return view('profil');
-});
-Route::get('/berita', [BeritaController::class, 'getAllNews']);
-Route::get('/berita/{id}', [BeritaController::class, 'getNews']);
-Route::get('/event', [KalenderController::class, 'getEvent']);
-
-Route::get('/kontak', function () {
-    return view('kontak');
+    return view('welcome');
 });
 
-Route::get('/event', [KalenderController::class, 'getEvent']);
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';

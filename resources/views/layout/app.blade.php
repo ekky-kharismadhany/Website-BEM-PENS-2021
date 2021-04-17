@@ -44,7 +44,7 @@
     <header id="header" class="header fixed-top">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-            <a href="index.html" class="logo d-flex align-items-center">
+            <a href="/" class="logo d-flex align-items-center">
                 <img src="{{asset('img/logo-kementerian/KM_colorful.png')}}" alt="">
                 <img src="{{asset('img/logo-kementerian/Logo Cakra Gaharu.png')}}" alt="">
                 <span>BEM PENS 2021</span>
@@ -55,7 +55,7 @@
                     <li><a class="nav-link scrollto active" href="/">Beranda</a></li>
                     <li><a class="nav-link scrollto" href="/profil">Profil</a></li>
                     <li><a class="nav-link scrollto" href="/berita">Berita</a></li>
-                    <li><a class="nav-link scrollto" href="/kalender">Kalender</a></li>
+                    <li><a class="nav-link scrollto" href="/event">Kalender</a></li>
                     <li><a class="nav-link scrollto" href="/kontak">Kontak</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
