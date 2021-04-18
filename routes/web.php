@@ -3,6 +3,7 @@
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\KalenderController;
 use App\Http\Controllers\ProfileController;
+use App\Models\Berita;
 use App\Models\Kalender;
 use Illuminate\Support\Facades\Route;
 
@@ -35,9 +36,11 @@ Route::group(['middleware' => 'auth'], function () {
     })->name('dashboard');
     Route::view('profile', 'profile')->name('profile');
     Route::put('profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::view('news', 'news')->name('news');
+    Route::get('/news', [BeritaController::class, 'index'])->name('news');
     Route::view('news/add', 'addNews')->name('news.add');
-    Route::view('news/edit/', 'editNews')->name('news.edit');
+    Route::view('news/edit', 'editNews')->name('news.edit');
+    Route::post('news/create', [BeritaController::class, 'create'])->name('news.create');
+    Route::post('news/store', [BeritaController::class, 'store'])->name('news.store');
     Route::view('calendar', 'calendar')->name('calendar');
 });
 require __DIR__ . '/auth.php';
