@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\KalenderController;
+use App\Http\Controllers\KontakController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Berita;
 use App\Models\Kalender;
@@ -21,14 +22,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('landing');
 });
-Route::get('/profil', function () {
-    return view('profil');
-});
-Route::get('/berita', [BeritaController::class, 'getAllNews']);
+// Route::get('/profil', function () {
+//     return view('profil');
+// });
+Route::get('/berita', [BeritaController::class, 'index_berita']);
+Route::get('/berita/{id}', [BeritaController::class, 'getNews']);
 Route::get('/event', [KalenderController::class, 'getEvent']);
-Route::get('/kontak', function () {
-    return view('kontak');
-});
+Route::get('/kontak', [KontakController::class, 'index']);
+Route::post('/kontak/send', [KontakController::class, 'sendMail'])->name('kontak.mail');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', function () {
@@ -41,6 +42,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::view('news/edit', 'editNews')->name('news.edit');
     Route::post('news/create', [BeritaController::class, 'create'])->name('news.create');
     Route::post('news/store', [BeritaController::class, 'store'])->name('news.store');
+    Route::post('news/destroy', [BeritaController::class, 'destroy'])->name('news.destroy');
+    Route::post('news/update', [BeritaController::class, 'update'])->name('news.update');
     Route::view('calendar', 'calendar')->name('calendar');
 });
 require __DIR__ . '/auth.php';

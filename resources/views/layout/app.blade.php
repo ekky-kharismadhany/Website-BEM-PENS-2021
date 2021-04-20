@@ -52,11 +52,11 @@
 
             <nav id="navbar" class="navbar">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="/">Beranda</a></li>
-                    <li><a class="nav-link scrollto" href="/profil">Profil</a></li>
-                    <li><a class="nav-link scrollto" href="/berita">Berita</a></li>
-                    <li><a class="nav-link scrollto" href="/event">Kalender</a></li>
-                    <li><a class="nav-link scrollto" href="/kontak">Kontak</a></li>
+                    <li><a class="nav-link " href="/">Beranda</a></li>
+                    <!-- <li><a class="nav-link " href="/profil">Profil</a></li> -->
+                    <li><a class="nav-link " href="/berita">Berita</a></li>
+                    <li><a class="nav-link " href="/event">Kalender</a></li>
+                    <li><a class="nav-link " href="/kontak">Kontak</a></li>
                 </ul>
                 <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->

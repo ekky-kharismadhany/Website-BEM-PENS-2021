@@ -28,13 +28,13 @@
                                                     <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                                                         Status
                                                     </th>
-                                                    <th scope="col" class="relative px-6 py-3">
-                                                        <span class="sr-only">Edit</span>
+                                                    <th scope="col" colspan="2" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                                        Action
                                                     </th>
                                                 </tr>
                                             </thead>
                                             <tbody class="bg-white divide-y divide-gray-200">
-                                            @foreach($articles as $article)
+                                                @foreach($articles as $article)
                                                 <tr>
                                                     <td class="px-6 py-4 whitespace-nowrap">
                                                         <div class="flex items-center">
@@ -60,7 +60,12 @@
                                                         </span>
                                                     </td>
                                                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                                        <a href="{{route('news.edit')}}" class="text-indigo-600 hover:text-indigo-900">Edit</a>
+                                                        <button class="bg-green-600 hover:bg-green-400 text-white py-2 px-4 rounded p-4"><a href="{{route('news.edit')}}">Edit</a></button>
+                                                    </td>
+                                                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                                        <form action="{{route('news.destroy')}}"></form>
+                                                        <input name="id" value="{{$article->id}}" hidden>
+                                                        <button type="submit" class="bg-red-600 hover:bg-red-400 text-white py-2 px-4 rounded p-4">Delete</button>
                                                     </td>
                                                 </tr>
                                                 @endforeach

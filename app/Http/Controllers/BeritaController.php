@@ -102,8 +102,20 @@ class BeritaController extends Controller
      * @param  \App\Models\Berita  $berita
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Berita $berita)
+    public function destroy(Berita $berita, Request $request)
     {
-        //
+        $berita = $berita->find($request->id);
+        $berita->delete();
+        return redirect()->route('news')->with('message', 'News deleted successfully');
+    }
+
+    public function index_berita() {
+        $articles = Berita::all();
+        return view('berita', ['articles' => $articles]);
+    }
+
+    public function getNews($id) {
+        $articles = Berita::find($id);
+        return view('isiberita', ['articles' => $articles]);
     }
 }
