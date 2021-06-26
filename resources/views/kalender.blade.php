@@ -14,4 +14,5 @@
 <script>
 const events = <?= json_encode($event); ?>;
 </script>
+<script src="{{asset('js/kalender.js')}}"></script>
 @endsection

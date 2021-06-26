@@ -28,8 +28,12 @@
             <!-- Email Address -->
             <div class="mt-4">
                 <x-label for="kementerian" :value="__('Kementerian')" />
-
-                <x-input id="kementerian" class="block mt-1 w-full" type="text" name="kementerian" :value="old('kementerian')" required />
+                <select id="kementerian" name="kementerian" class="rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50">
+                @foreach($ministries as $ministry)
+                    <option value="{{$ministry->id}}">{{$ministry->Kementerian}}</option>
+                @endforeach
+                </select>
+                <!-- <x-input id="kementerian" class="block mt-1 w-full" type="text" name="kementerian" :value="old('kementerian')" required /> -->
             </div>
             <!-- Password -->
             <div class="mt-4">

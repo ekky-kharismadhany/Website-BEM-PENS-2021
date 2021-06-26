@@ -6,6 +6,7 @@ use App\Http\Requests\CreateNewsRequest;
 use App\Models\Berita;
 use Facade\FlareClient\Http\Response;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BeritaController extends Controller
 {
@@ -13,7 +14,11 @@ class BeritaController extends Controller
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
+     * 
      */
+
+    private $fileName = "";
+    
     public function index()
     {
         $articles = Berita::all();
@@ -30,8 +35,10 @@ class BeritaController extends Controller
         $news = Berita::create([
             'title' => $request->title,
             'author' => $request->author,
+            'user_id' => Auth::user()->id,
+            'kementerian_id' => Auth::user()->kementerian_id,
             'content' => $request->editor,
-            'filename' => $request->cookie('image')
+            'filename' => $this->fileName
         ]);
         return redirect()->back()->with('success', 'News Uploaded');
     }
@@ -46,14 +53,14 @@ class BeritaController extends Controller
     {
         if ($request->hasFile('upload')) {
             $originName = $request->file('upload')->getClientOriginalName();
-            $fileName = pathinfo($originName, PATHINFO_FILENAME);
+            $this->fileName = pathinfo($originName, PATHINFO_FILENAME);
             $extension = $request->file('upload')->getClientOriginalExtension();
-            $fileName = $fileName . '_' . time() . '.' . $extension;
+            $this->fileName = $this->fileName . '_' . time() . '.' . $extension;
 
-            $request->file('upload')->move(public_path('images'), $fileName);
+            $request->file('upload')->move(public_path('images'), $this->fileName);
 
             $CKEditorFuncNum = $request->input('CKEditorFuncNum');
-            $url = asset('images/' . $fileName);
+            $url = asset('images/' . $this->fileName);
             $msg = 'Image uploaded successfully';
             $response = "<script>window.parent.CKEDITOR.tools.callFunction($CKEditorFuncNum, '$url', '$msg')</script>";
 

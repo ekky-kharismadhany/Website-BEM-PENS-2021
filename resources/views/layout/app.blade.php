@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <title>BEM PENS - Cakra Gaharu</title>
-    <meta content="" name="description">
+    <meta content="website BEM PENS" name="description">
 
     <meta content="" name="keywords">
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -17,10 +17,9 @@
     <link href="{{asset('img/logo-kementerian/KM_colorful.png')}}" rel="icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
     <!-- Vendor CSS Files -->
-    <!-- <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
     <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
     <link href="{{asset('vendor/aos/aos.css')}}" rel="stylesheet">
@@ -45,8 +44,8 @@
         <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
             <a href="/" class="logo d-flex align-items-center">
-                <img src="{{asset('img/logo-kementerian/KM_colorful.png')}}" alt="">
-                <img src="{{asset('img/logo-kementerian/Logo Cakra Gaharu.png')}}" alt="">
+                <img src="{{asset('img/logo-kementerian/KM_colorful.png')}}" alt="Logo KM PENS">
+                <img src="{{asset('img/logo-kementerian/Logo Cakra Gaharu.png')}}" alt="Logo Cakra Gaharu">
                 <span>BEM PENS 2021</span>
             </a>
 
@@ -74,8 +73,7 @@
             <div class="container">
                 <div class="row gy-4">
                     <div class="col-lg-5 col-md-12 footer-info">
-                        <a href="index.html" class="logo d-flex align-items-center">
-                            <img src="assets/img/logo.png" alt="">
+                        <a href="/" class="logo d-flex align-items-center">
                             <span>BEM PENS 2021</span>
                         </a>
                         <p>Gerakan Perubahan Beri Pembaharuan</p>
@@ -106,9 +104,9 @@
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
-    <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.js')}}"></script>
-    <script src="{{asset('vendor/aos/aos.js')}}"></script>
-    <script src="{{asset('vendor/php-email-form/validate.js')}}"></script>
+    <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.js')}}" ></script>
+    <script src="{{asset('vendor/aos/aos.js')}}" ></script>
+    <script src="{{asset('vendor/php-email-form/validate.js')}}" ></script>
     <script src="{{asset('vendor/swiper/swiper-bundle.min.js')}}"></script>
     <script src="{{asset('vendor/purecounter/purecounter.js')}}"></script>
     <script src="{{asset('vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
@@ -116,7 +114,6 @@
 
     <!-- Template Main JS File -->
     <script src="{{asset('js/main.js')}}"></script>
-    <script src="{{asset('js/kalender.js')}}"></script>
 
 </body>
 

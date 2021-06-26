@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Berita extends Migration
+class Kementerian extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class Berita extends Migration
      */
     public function up()
     {
-        Schema::create('Berita', function (Blueprint $table) {
+        Schema::create('kementerian', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('content');
-            $table->string('author');
-            $table->integer("user_id");
-            $table->integer("kementerian_id");
+            $table->string("Kementerian");
             $table->timestamps();
         });
     }
@@ -31,6 +27,6 @@ class Berita extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Berita');
+        Schema::dropIfExists('kementerian');
     }
 }

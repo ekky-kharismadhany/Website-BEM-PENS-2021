@@ -8,6 +8,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class RegisteredUserController extends Controller
@@ -19,7 +20,8 @@ class RegisteredUserController extends Controller
      */
     public function create()
     {
-        return view('auth.register');
+        $ministries = DB::table("kementerian")->get();
+        return view('auth.register', ['ministries' => $ministries]);
     }
 
     /**
@@ -32,19 +34,21 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'name' => 'required|string|max:255',
-        //     'email' => 'required|string|email|max:255|unique:users',
-        //     'kementerian' => 'required'|'string'|'max:255',
-        //     'password' => 'required|string|confirmed|min:8',
-        // ]);
-
+        // dd($request);
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'kementerian' => 'required',
+            'password' => 'required|string|confirmed|min:8',
+        ]);
+        
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'kementerian' => $request->kementerian,
+            'kementerian_id' => $request->kementerian,
             'password' => Hash::make($request->password),
         ]);
+        // dd($user);
 
         event(new Registered($user));
 
