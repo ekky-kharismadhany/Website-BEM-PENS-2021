@@ -6,6 +6,7 @@ use App\Http\Controllers\KontakController;
 use App\Http\Controllers\ProfileController;
 use App\Models\Berita;
 use App\Models\Kalender;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +21,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('landing');
+    $articles = Berita::limit(3)->get();
+    return view('landing', ['articles' => $articles]);
 });
 // Route::get('/profil', function () {
 //     return view('profil');
@@ -37,13 +39,21 @@ Route::group(['middleware' => 'auth'], function () {
     })->name('dashboard');
     Route::view('profile', 'profile')->name('profile');
     Route::put('profile', [ProfileController::class, 'update'])->name('profile.update');
+
     Route::get('/news', [BeritaController::class, 'index'])->name('news');
     Route::view('news/add', 'addNews')->name('news.add');
-    Route::view('news/edit', 'editNews')->name('news.edit');
     Route::post('news/create', [BeritaController::class, 'create'])->name('news.create');
+    Route::get('news/edit/{id}', [BeritaController::class, 'edit'])->name('news.edit');
     Route::post('news/store', [BeritaController::class, 'store'])->name('news.store');
-    Route::post('news/destroy', [BeritaController::class, 'destroy'])->name('news.destroy');
-    Route::post('news/update', [BeritaController::class, 'update'])->name('news.update');
-    Route::view('calendar', 'calendar')->name('calendar');
+    Route::put('news/update', [BeritaController::class, 'update'])->name('news.update');
+    Route::delete('news/destroy', [BeritaController::class, 'destroy'])->name('news.destroy');
+
+    Route::get('calendar', [KalenderController::class, 'index'])->name('calendar');
+    Route::view('calender/add', 'addCalendar')->name('calendar.add');
+    Route::post('calender/create', [KalenderController::class, 'create'])->name('calendar.create');
+    Route::get('calendar/edit/{id}', [KalenderController::class, 'edit'])->name('calendar.edit');
+    Route::post('calendar/store', [KalenderController::class, 'store'])->name('calendar.store');
+    Route::put('calender/update', [KalenderController::class, 'update'])->name('calendar.update');
+    Route::delete('calendar/destroy', [KalenderController::class, 'destroy'])->name('calendar.destroy');
 });
 require __DIR__ . '/auth.php';

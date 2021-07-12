@@ -86,9 +86,10 @@ class BeritaController extends Controller
      * @param  \App\Models\Berita  $berita
      * @return \Illuminate\Http\Response
      */
-    public function edit(Berita $berita)
+    public function edit(Berita $berita, $id)
     {
-        //
+        $articles = Berita::find($id);
+        return view('editNews', ['articles' => $articles]);
     }
 
     /**
@@ -100,7 +101,11 @@ class BeritaController extends Controller
      */
     public function update(Request $request, Berita $berita)
     {
-        //
+        $berita = Berita::find($request->id);
+        $berita->title = $request->title;
+        $berita->content = $request->editor;
+        $berita->save();
+        return redirect()->route('news')->with('message', 'News Update Succesfully');
     }
 
     /**

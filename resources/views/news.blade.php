@@ -16,6 +16,7 @@
                             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                                 <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
                                     <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+                                        <x-success-message />
                                         <table class="min-w-full divide-y divide-gray-200">
                                             <thead class="bg-gray-50">
                                                 <tr>
@@ -60,12 +61,15 @@
                                                         </span>
                                                     </td>
                                                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                                        <button class="bg-green-600 hover:bg-green-400 text-white py-2 px-4 rounded p-4"><a href="{{route('news.edit')}}">Edit</a></button>
+                                                        <button class="bg-green-600 hover:bg-green-400 text-white py-2 px-4 rounded p-4"><a href="{{route('news.edit', ['id' => $article->id])}}">Edit</a></button>
                                                     </td>
                                                     <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                                        <form action="{{route('news.destroy')}}"></form>
-                                                        <input name="id" value="{{$article->id}}" hidden>
-                                                        <button type="submit" class="bg-red-600 hover:bg-red-400 text-white py-2 px-4 rounded p-4">Delete</button>
+                                                        <form action="{{route('news.destroy')}}" method="POST">
+                                                            @csrf
+                                                            @method('delete');
+                                                            <input name="id" value="{{$article->id}}" hidden>
+                                                            <button type="submit" class="bg-red-600 hover:bg-red-400 text-white py-2 px-4 rounded p-4">Delete</button>
+                                                        </form>
                                                     </td>
                                                 </tr>
                                                 @endforeach

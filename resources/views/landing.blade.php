@@ -70,7 +70,6 @@
 
         <div class="col-lg-3">
           <div class="box" data-aos="fade-up" data-aos-delay="200">
-            <img src="" class="img-fluid" alt="Misi 1">
             <h3>Misi 1</h3>
             <p>Penguatan Internal BEM PENS yang Profesional dan Loyalitas</p>
           </div>
@@ -78,7 +77,6 @@
 
         <div class="col-lg-3 mt-4 mt-lg-0">
           <div class="box" data-aos="fade-up" data-aos-delay="400">
-            <img src="" class="img-fluid" alt="Misi 2">
             <h3>Misi 2</h3>
             <p>Pelayanan Optimal</p>
           </div>
@@ -86,14 +84,12 @@
 
         <div class="col-lg-3 mt-4 mt-lg-0">
           <div class="box" data-aos="fade-up" data-aos-delay="600">
-            <img src="" class="img-fluid" alt="Misi 3">
             <h3>Misi 3</h3>
             <p>Mahasiswa Sejahtera</p>
           </div>
         </div>
         <div class="col-lg-3 mt-4 mt-lg-0">
           <div class="box" data-aos="fade-up" data-aos-delay="600">
-            <img src="" class="img-fluid" alt="Misi 4">
             <h3>Misi 4</h3>
             <p>Mahasiswa Bergerak</p>
           </div>
@@ -115,7 +111,7 @@
           <div class="service-box blue">
             <i class="icon"><img alt="Logo Cakra Gaharu" src="{{asset('img/logo-kementerian/Logo Cakra Gaharu.png')}}" width="64" height="64"></img></i>
             <h3>Badan Koordinasi Pemandu</h3>
-            <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+            <p>Badan Koordinasi Pemandu bertugas dan bertanggung jawab atas segala bentuk kepemanduan di PENS</p>
             <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
@@ -123,7 +119,7 @@
           <div class="service-box orange">
             <i class="icon"><img alt="Logo Cakra Gaharu" src="{{asset('img/logo-kementerian/Logo Cakra Gaharu.png')}}" width="64" height="64"></img></i>
             <h3>Badan Pengurus Harian</h3>
-            <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
+            <p>Bada Pengurus Harian bertugas dan bertanggung jawab atas arah kebijakan organisasi, administrasi, dan keuangan BEM PENS</p>
             <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
@@ -131,7 +127,7 @@
           <div class="service-box green">
             <i class="icon"><img alt="Logo Cakra Gaharu" src="{{asset('img/logo-kementerian/Logo Cakra Gaharu.png')}}" width="64" height="64"></img></i>
             <h3>Badan Koordinasi FKMPI</h3>
-            <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
+            <p>Badan Koordinasi FKMPI dalam koordinasi Forum Komunikasi Mahasiswa Politeknik se-Indonesia (FKMPI)</p>
             <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
@@ -139,7 +135,7 @@
           <div class="service-box red">
             <i class="icon"><img alt="Logo Kementerian Ristek" src="{{asset('img/logo-kementerian/Logo Ristek.png')}}" width="64" height="64"></img></i>
             <h3>Kementerian Riset dan Teknologi</h3>
-            <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
+            <p>Kementerian Riset dan Teknologi bergerak pada bidang karya dan prestasi mahasiswa</p>
             <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
@@ -147,7 +143,7 @@
           <div class="service-box purple">
             <i class="icon"><img alt="Logo Kementerian Perkom" src="{{asset('img/logo-kementerian/Logo Perkom.png')}}" width="64" height="64"></img></i>
             <h3>Kementerian Perekonomian</h3>
-            <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
+            <p>Kementerian Perekonomian bergerak untuk mengembangkan minat dan potensi mahasiswa KM PENS di bidang kreatif</p>
             <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
@@ -155,7 +151,7 @@
           <div class="service-box pink">
             <i class="icon"><img alt="Logo Kementerian Dagri" src="{{asset('img/logo-kementerian/Logo Dagri.png')}}" width="64" height="64"></img></i>
             <h3>Kementerian Dalam Negeri</h3>
-            <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
+            <p>Kementerian Dalam Negeri bergerak di bidang internal dan koordinasi antar ormawa di PENS</p>
             <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
@@ -163,7 +159,7 @@
           <div class="service-box red">
             <i class="icon"><img alt="Logo Kementerian Lugri" src="{{asset('img/logo-kementerian/Logo Lugri.png')}}" width="64" height="64"></img></i>
             <h3>Kementerian Luar Negeri</h3>
-            <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
+            <p>Kementerian Luar Negeri menaungi hubungan dengan organisasi eksternal dan branding KM PENS</p>
             <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
@@ -171,7 +167,7 @@
           <div class="service-box purple">
             <i class="icon"><img alt="Logo Kementerian Sosmas" src="{{asset('img/logo-kementerian/Logo Sosmas.png')}}" width="64" height="64"></img></i>
             <h3>Kementerian Sosial Masyarakat</h3>
-            <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
+            <p>Kementerian Sosial Masyarakat bertugas meningkatkan kepekaan dan kepedulian mahasiswa terhadap permasalahan sosial</p>
             <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
@@ -179,7 +175,7 @@
           <div class="service-box pink">
             <i class="icon"><img alt="Logo Kementerian Sosbang" src="{{asset('img/logo-kementerian/Logo Sosbang.png')}}" width="64" height="64"></img></i>
             <h3>Kementerian Sosial Kebangsaan</h3>
-            <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
+            <p>Kementerian Sosial Kebangsaan yang mengawal dan mengkaji kebijakan pemerintah dan dinamika masyarakat</p>
             <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
@@ -187,7 +183,7 @@
           <div class="service-box red">
             <i class="icon"><img alt="Logo Kementerian Kesma" src="{{asset('img/logo-kementerian/Logo Kesma.png')}}" width="64" height="64"></img></i>
             <h3>Kementerian Kesejahteraan Mahasiswa</h3>
-            <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
+            <p>Kementerian Kesejahteraan Mahasiswa bergerak di bidang informasi mengenai kebijakan kampus dan penghubung manajemen dan mahasiswa</p>
             <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
@@ -195,7 +191,7 @@
           <div class="service-box purple">
             <i class="icon"><img alt="Logo Kementerian PSDM" src="{{asset('img/logo-kementerian/PSDM.png')}}" width="64" height="64"></img></i>
             <h3>Kementerian Pengembangan Sumber Daya Mahasiswa</h3>
-            <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
+            <p>Kementerian Pengembangan Sumber Daya Mahasiswa berperan mengembangkan potensi mahasiswa PENS agar berdaya saing dan berkualitas</p>
             <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
@@ -203,7 +199,7 @@
           <div class="service-box pink">
             <i class="icon"><img alt="Logo Kementerian Kominfo" src="{{asset('img/logo-kementerian/Logo Kominfo.png')}}" width="64" height="64"></img></i>
             <h3>Kementerian Komunikasi dan Informasi</h3>
-            <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
+            <p>Kementerian Komunikasi dan Informasi bertugas sebagai penyebar informasi dan peningkatan citra positif BEM PENS</p>
             <a href="#" class="read-more"><span>Read More</span> <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
@@ -222,14 +218,16 @@
       </header>
 
       <div class="row">
+      @foreach($articles as $article)
         <div class="col-lg-4">
           <div class="post-box">
-            <div class="post-img"><img src="" class="img-fluid" alt="footer image"></div>
-            <span class="post-date">Tue, September 15</span>
-            <h3 class="post-title">Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit</h3>
-            <a href="/berita" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+            <!-- <div class="post-img"><img src="assets/img/blog/blog-1.jpg" class="img-fluid" alt=""></div> -->
+            <span class="post-date">{{$article->created_at}}</span>
+            <h3 class="post-title">{{$article->title}}</h3>
+            <a href="/berita/{{$article->id}}" class="readmore stretched-link mt-auto"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
+      @endforeach
       </div>
 
     </div>
