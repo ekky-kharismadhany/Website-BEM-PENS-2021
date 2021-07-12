@@ -9,7 +9,7 @@ class Kalender extends Model
 {
     protected $table = "kalenders";
     protected $fillable = [
-        'title', 'deskripsi', 'start', 'end', 'url'
+        'title', 'Deskripsi', 'start', 'end', 'url'
     ];
     protected $hidden = [];
 }
