@@ -18,11 +18,12 @@ class BeritaController extends Controller
      */
 
     private $fileName = "";
+    protected $folder = "news.";
     
     public function index()
     {
         $articles = Berita::all();
-        return view('news', ['articles' => $articles]);
+        return view($this->folder . 'news', ['articles' => $articles]);
     }
 
     /**
@@ -77,7 +78,8 @@ class BeritaController extends Controller
      */
     public function show(Berita $berita)
     {
-        //
+        $berita = Berita::all();
+        return view($this->folder. 'addNews', ['berita' => $berita]);
     }
 
     /**
@@ -89,7 +91,7 @@ class BeritaController extends Controller
     public function edit(Berita $berita, $id)
     {
         $articles = Berita::find($id);
-        return view('editNews', ['articles' => $articles]);
+        return view($this->folder . 'editNews', ['articles' => $articles]);
     }
 
     /**

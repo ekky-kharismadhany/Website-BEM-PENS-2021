@@ -41,7 +41,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::put('profile', [ProfileController::class, 'update'])->name('profile.update');
 
     Route::get('/news', [BeritaController::class, 'index'])->name('news');
-    Route::view('news/add', 'addNews')->name('news.add');
+    Route::get('news/add', [BeritaController::class, 'show'])->name('news.add');
     Route::post('news/create', [BeritaController::class, 'create'])->name('news.create');
     Route::get('news/edit/{id}', [BeritaController::class, 'edit'])->name('news.edit');
     Route::post('news/store', [BeritaController::class, 'store'])->name('news.store');
@@ -49,7 +49,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::delete('news/destroy', [BeritaController::class, 'destroy'])->name('news.destroy');
 
     Route::get('calendar', [KalenderController::class, 'index'])->name('calendar');
-    Route::view('calender/add', 'addCalendar')->name('calendar.add');
+    Route::get('calender/add', [KalenderController::class, 'add'])->name('calendar.add');
     Route::post('calender/create', [KalenderController::class, 'create'])->name('calendar.create');
     Route::get('calendar/edit/{id}', [KalenderController::class, 'edit'])->name('calendar.edit');
     Route::post('calendar/store', [KalenderController::class, 'store'])->name('calendar.store');

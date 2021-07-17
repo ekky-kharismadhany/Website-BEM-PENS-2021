@@ -10,10 +10,12 @@ use Illuminate\Support\Facades\DB;
 class KalenderController extends Controller
 {
     //
+    protected $folder = 'calendar.';
+
     public function index()
     {
         $event = Kalender::all();
-        return view('calendar', ['events' => $event]);
+        return view($this->folder.'calendar', ['events' => $event]);
     }
     public function getEvent()
     {
@@ -26,12 +28,12 @@ class KalenderController extends Controller
 
     public function add()
     {
-        return view('addCalendar');
+        return view($this->folder.'addCalendar');
     }
 
     public function edit($id) {
         $event = Kalender::find($id);
-        return view('editCalender', ['event' => $event]);
+        return view($this->folder.'editCalender', ['event' => $event]);
     }
 
     public function store(CalenderRequest $request)
