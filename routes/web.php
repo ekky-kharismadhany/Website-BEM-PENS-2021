@@ -4,10 +4,12 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\KalenderController;
 use App\Http\Controllers\KontakController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\LinkShortener;
 use App\Models\Berita;
 use App\Models\Kalender;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
+use League\CommonMark\Inline\Element\Link;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,6 +34,9 @@ Route::get('/berita/{id}', [BeritaController::class, 'getNews']);
 Route::get('/event', [KalenderController::class, 'getEvent']);
 Route::get('/kontak', [KontakController::class, 'index']);
 Route::post('/kontak/send', [KontakController::class, 'sendMail'])->name('kontak.mail');
+Route::get('/link', [LinkShortener::class, 'index']);
+Route::post('/link/store', [LinkShortener::class, 'store']);
+Route::get('{shortLink}', [LinkShortener::class, 'redirect']);
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', function () {
